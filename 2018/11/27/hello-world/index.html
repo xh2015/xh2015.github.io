@@ -616,6 +616,10 @@
           
 
   
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
 
 
 
@@ -962,6 +966,35 @@
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '5119847a52fa272e6a94',
+    clientSecret: 'a71db5c8766ec2f846c080ee8754c259b335903c',
+    repo: 'blog-comment',
+    owner: 'xh2015',
+    admin: ['xh2015'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
 
